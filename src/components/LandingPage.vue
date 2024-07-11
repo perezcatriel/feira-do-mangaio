@@ -118,7 +118,6 @@ header {
   padding: 20px;
   background-color: var(--blanco);
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar h2 {
@@ -166,7 +165,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
@@ -185,7 +184,6 @@ header {
   font-size: 3em;
   margin-bottom: 10px;
   text-shadow: 1px 1px 5px var(--naranja);
-
 }
 
 .hero-content--slogan {
@@ -301,9 +299,9 @@ footer a:hover {
   }
 
   .about-content,
-.dates-content,
-.contact-content {
-  font-size: 1em;
-}
+  .dates-content,
+  .contact-content {
+    font-size: 1em;
+  }
 }
 </style>
