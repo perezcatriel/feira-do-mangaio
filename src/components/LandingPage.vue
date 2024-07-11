@@ -172,7 +172,7 @@ section {
 }
 
 .contact-content a {
-  font-size: 3rem;
+  font-size: 5rem;
   color: var(--gris);
 }
 
@@ -184,7 +184,8 @@ footer {
 }
 
 footer a {
-  color: var(--blanco)
+  color: var(--blanco);
+  text-decoration: none;
 }
 
 /* Estilos para móviles */
