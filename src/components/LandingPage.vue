@@ -178,11 +178,14 @@ header {
 .hero-content h1 {
   font-size: 4em;
   margin-bottom: 20px;
+  text-shadow: 2px 3px 5px var(--naranja);
 }
 
 .hero-content p {
   font-size: 3em;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 5px var(--naranja);
+
 }
 
 .hero-content--slogan {
