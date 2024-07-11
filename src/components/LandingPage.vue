@@ -23,15 +23,22 @@
         <p>Esperamos por você!</p>
         <p>Sábado 13</p>
         <p>17:00 - 22:00</p>
-        <a href="https://instagram.com/feiradomangaio_jeri" target="_blank" class="instagram-button">Visite nosso Instagram</a>
+        <a
+          href="https://instagram.com/feiradomangaio_jeri"
+          target="_blank"
+          class="instagram-button"
+          >Visite nosso Instagram</a
+        >
       </div>
     </section>
     <section id="about">
       <div class="about-content">
         <h2>Sobre a Feira</h2>
         <p>
-          A Feira do Mangaio é um evento para todos que apreciam a cultura
-          local, moda, arte e gastronomia.
+          A feira mangaio é um projeto independente, gerido por artistas,
+          designers e artesãs que procura promover um espaço de arte e design
+          autoral e consciente, que nos permita fortalecer a economia circular,
+          inspirando-nos num presente coletivo.
         </p>
       </div>
     </section>
@@ -71,7 +78,6 @@
     </footer>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -168,12 +174,12 @@ export default {
 }
 
 .hero-content h1 {
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 2em;
+  font-size: 3em;
   margin-bottom: 10px;
 }
 
@@ -186,10 +192,12 @@ export default {
 
 .instagram-button {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 100px;
   padding: 10px 20px;
   background-color: var(--naranja);
   color: var(--blanco);
+  text-shadow: 1px 1px 1px var(--marron-claro);
+  font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -197,6 +205,10 @@ export default {
 
 .instagram-button:hover {
   background-color: var(--marron);
+}
+
+.instagram-button a {
+  margin-top: 510px !important;
 }
 
 section {
@@ -266,6 +278,11 @@ footer a {
     padding: 10px 0;
     width: 100%;
     text-align: center;
+  }
+
+  h1,
+  .hero-content p {
+    font-size: 2em !important;
   }
 }
 </style>
