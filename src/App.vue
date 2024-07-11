@@ -5,32 +5,36 @@
 </template>
 
 <script>
-import LandingPage from './components/LandingPage.vue';
+import LandingPage from "./components/LandingPage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    LandingPage
-  }
+    LandingPage,
+  },
 };
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Sacramento&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Sacramento&display=swap");
 
 :root {
-  --naranja: #DC7F22;
-  --blanco: #FCF4EC;
+  --naranja: #dc7f22;
+  --blanco: #fcf4ec;
   --marron: #724212;
-  --marron-claro: #A99170;
-  --gris: #B2BEB4;
-  --negro: #455A5A;
+  --marron-claro: #a99170;
+  --gris: #b2beb4;
+  --negro: #455a5a;
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f4f4f9;
 }
 

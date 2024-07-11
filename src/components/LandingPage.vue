@@ -8,9 +8,7 @@
         <div>
           <h2>Feira do Mangaio</h2>
         </div>
-        <div class="menu-icon" @click="toggleMenu">
-          &#9776;
-        </div>
+        <div class="menu-icon" @click="toggleMenu">&#9776;</div>
         <div :class="['navbar-menu', { active: menuActive }]">
           <a href="#about" @click="closeMenu">Sobre</a>
           <a href="#dates" @click="closeMenu">Fechas</a>
@@ -25,6 +23,7 @@
         <p>Esperamos por você!</p>
         <p>Sábado 13</p>
         <p>17:00 - 22:00</p>
+        <a href="https://instagram.com/feiradomangaio_jeri" target="_blank" class="instagram-button">Visite nosso Instagram</a>
       </div>
     </section>
     <section id="about">
@@ -58,10 +57,21 @@
     </section>
     <footer>
       <p>© 2019 Feira do Mangaio</p>
-      <p>Made by <strong><a href="http://datacraft.vercel.app" target="_blank" rel="noopener noreferrer">DataCraft</a></strong></p>
+      <p>
+        Made by
+        <strong
+          ><a
+            href="http://datacraft.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            >DataCraft</a
+          ></strong
+        >
+      </p>
     </footer>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -83,7 +93,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Sacramento&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Sacramento&display=swap");
 
 .landing-page {
   font-family: "Julius Sans One", Impact, Haettenschweiler, "Arial Narrow Bold",
@@ -101,8 +111,8 @@ export default {
 }
 
 .navbar h2 {
-  color: var(--gris);
-  text-shadow: 1px 1px 1px var(--negro);
+  color: var(--naranja);
+  text-shadow: 1px 2px 1px var(--marron-claro);
 }
 
 .navbar-brand img {
@@ -116,13 +126,14 @@ export default {
 }
 
 .navbar-menu a:hover {
-  color: var(--naranja)
+  color: var(--naranja);
 }
 
 .menu-icon {
   display: none;
   cursor: pointer;
   font-size: 2em;
+  color: var(--gris);
 }
 
 .hero {
@@ -142,7 +153,12 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Cambia el color y la opacidad según tu preferencia */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Cambia el color y la opacidad según tu preferencia */
   z-index: 1; /* Asegúrate de que esté detrás del contenido del hero */
 }
 
@@ -166,6 +182,21 @@ export default {
   margin-top: -15px;
   font-size: 2.5em;
   font-weight: normal;
+}
+
+.instagram-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--naranja);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.instagram-button:hover {
+  background-color: var(--marron);
 }
 
 section {
@@ -193,7 +224,7 @@ section {
 
 .contact-content a {
   font-size: 5rem;
-  color: var(--gris);
+  color: var(--naranja);
 }
 
 footer {
@@ -227,6 +258,8 @@ footer a {
 
   .navbar-menu.active {
     display: flex;
+    z-index: 10;
+    margin-top: 20px;
   }
 
   .navbar-menu a {
