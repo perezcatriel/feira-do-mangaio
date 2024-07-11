@@ -85,12 +85,6 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Sacramento&display=swap');
 
-:root {
-  --negro: #000000;
-  --blanco: #ffffff;
-  --gris: #cccccc;
-}
-
 .landing-page {
   font-family: "Julius Sans One", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
@@ -106,6 +100,11 @@ export default {
   align-items: center;
 }
 
+.navbar h2 {
+  color: var(--gris);
+  text-shadow: 1px 1px 1px var(--negro);
+}
+
 .navbar-brand img {
   height: 50px;
 }
@@ -114,6 +113,10 @@ export default {
   margin: 0 15px;
   color: var(--negro);
   text-decoration: none;
+}
+
+.navbar-menu a:hover {
+  color: var(--naranja)
 }
 
 .menu-icon {
@@ -127,8 +130,25 @@ export default {
   padding: 100px 20px;
   background: url("@/assets/photos/feira.jpg") no-repeat center center;
   background-size: cover;
+  position: relative;
   color: var(--blanco);
-  text-shadow: 2px 2px 2px var(--negro);
+  text-shadow: 2px 2px 2px var(--marron);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cambia el color y la opacidad según tu preferencia */
+  z-index: 1; /* Asegúrate de que esté detrás del contenido del hero */
+}
+
+.hero-content {
+  position: relative; /* Agrega esta línea */
+  z-index: 2; /* Asegúrate de que el contenido esté encima de la capa transparente */
 }
 
 .hero-content h1 {
@@ -137,7 +157,7 @@ export default {
 }
 
 .hero-content p {
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 10px;
 }
 
