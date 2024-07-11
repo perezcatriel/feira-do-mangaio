@@ -57,7 +57,7 @@
       </div>
     </section>
     <footer>
-      <p>© 2024 Feira do Mangaio</p>
+      <p>© 2019 Feira do Mangaio</p>
       <p>Made by <strong><a href="http://datacraft.vercel.app" target="_blank" rel="noopener noreferrer">DataCraft</a></strong></p>
     </footer>
   </div>
