@@ -106,12 +106,6 @@ export default {
   background-color: var(--blanco);
 }
 
-header {
-  position: sticky;
-  top: -20px;
-  z-index: 100;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -185,7 +179,6 @@ header {
   font-size: 3em;
   margin-bottom: 10px;
   text-shadow: 1px 1px 5px var(--naranja);
-
 }
 
 .hero-content--slogan {
@@ -301,9 +294,9 @@ footer a:hover {
   }
 
   .about-content,
-.dates-content,
-.contact-content {
-  font-size: 1em;
-}
+  .dates-content,
+  .contact-content {
+    font-size: 1em;
+  }
 }
 </style>
