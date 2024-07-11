@@ -99,13 +99,17 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Sacramento&display=swap");
-
 .landing-page {
   font-family: "Julius Sans One", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
   color: var(--negro);
   background-color: var(--blanco);
+}
+
+header {
+  position: sticky;
+  top: -20px;
+  z-index: 100;
 }
 
 .navbar {
@@ -114,6 +118,7 @@ export default {
   padding: 20px;
   background-color: var(--blanco);
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar h2 {
@@ -133,6 +138,7 @@ export default {
 
 .navbar-menu a:hover {
   color: var(--naranja);
+  font-weight: bold;
 }
 
 .menu-icon {
@@ -148,6 +154,7 @@ export default {
   background: url("@/assets/photos/feira.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
+  background-attachment: fixed;
   color: var(--blanco);
   text-shadow: 2px 2px 2px var(--marron);
 }
@@ -159,18 +166,13 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Cambia el color y la opacidad según tu preferencia */
-  z-index: 1; /* Asegúrate de que esté detrás del contenido del hero */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .hero-content {
-  position: relative; /* Agrega esta línea */
-  z-index: 2; /* Asegúrate de que el contenido esté encima de la capa transparente */
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content h1 {
@@ -212,7 +214,7 @@ export default {
 }
 
 section {
-  padding: 60px 20px;
+  padding: 50px 20px 0;
 }
 
 .about-content,
@@ -221,6 +223,7 @@ section {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  font-size: 1.5em;
 }
 
 .dates-content ul {
@@ -239,6 +242,10 @@ section {
   color: var(--naranja);
 }
 
+.contact-content a:hover {
+  color: var(--gris);
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -249,6 +256,11 @@ footer {
 footer a {
   color: var(--blanco);
   text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--naranja);
+  font-weight: bold;
 }
 
 /* Estilos para móviles */
@@ -284,5 +296,11 @@ footer a {
   .hero-content p {
     font-size: 2em !important;
   }
+
+  .about-content,
+.dates-content,
+.contact-content {
+  font-size: 1em;
+}
 }
 </style>
