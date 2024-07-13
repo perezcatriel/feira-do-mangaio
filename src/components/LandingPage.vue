@@ -16,13 +16,15 @@
         </div>
       </nav>
     </header>
-    <section class="hero">
+
+    <div class="hero">
+      <div class="hero-background"></div>
       <div class="hero-content">
         <h1>Feira do Mangaio</h1>
         <p class="hero-content--slogan">Moda, Arte, Decoração e Quitutes</p>
         <p>Esperamos por você!</p>
         <p>Sábado 13</p>
-        <p>17:00 - 22:00</p>
+        <div id="countdown"></div>
         <a
           href="https://instagram.com/feiradomangaio_jeri"
           target="_blank"
@@ -30,7 +32,8 @@
           >Visite nosso Instagram</a
         >
       </div>
-    </section>
+    </div>
+
     <section id="about">
       <div class="about-content">
         <h2>Sobre a Feira</h2>
@@ -96,6 +99,34 @@ export default {
     },
   },
 };
+
+// Fecha de destino para la cuenta regresiva (13 de julio de 2024 a las 17:00)
+var countDownDate = new Date("Jul 13, 2024 17:00:00").getTime();
+
+// Actualiza la cuenta regresiva cada segundo
+var countdownfunction = setInterval(function () {
+  // Obtiene la fecha y hora actuales
+  var now = new Date().getTime();
+
+  // Calcula la diferencia entre la fecha actual y la fecha de destino
+  var distance = countDownDate - now;
+
+  // Cálculos de tiempo para días, horas, minutos y segundos
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Muestra la cuenta regresiva en el elemento con id="countdown"
+  document.getElementById("countdown").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+  // Si la cuenta regresiva ha terminado, muestra un mensaje
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("countdown").innerHTML = "¡El evento ha comenzado!";
+  }
+}, 1000);
 </script>
 
 <style scoped>
@@ -169,6 +200,10 @@ header {
   z-index: 1;
 }
 
+.hero::after {
+  filter: blur(1000px);
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -191,6 +226,14 @@ header {
   margin-top: -15px;
   font-size: 2.5em;
   font-weight: normal;
+}
+
+#countdown {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 40px 0 0;
+  color: var(--naranja);
+  text-shadow: 1px 1px var(--blanco);
 }
 
 .instagram-button {
@@ -302,6 +345,10 @@ footer a:hover {
   .dates-content,
   .contact-content {
     font-size: 1em;
+  }
+
+  #countdown {
+    font-size: 2em;
   }
 }
 </style>
