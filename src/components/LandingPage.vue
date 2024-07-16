@@ -49,7 +49,6 @@
       <div class="dates-content">
         <h2>Próximas Feiras</h2>
         <ul>
-          <li>13/07 - Praça Principal de Jeri</li>
           <li>20/07 - Praça Principal de Jeri</li>
           <li>27/07 - Gabiroba do Preá</li>
         </ul>
@@ -101,7 +100,7 @@ export default {
 };
 
 // Fecha de destino para la cuenta regresiva (13 de julio de 2024 a las 17:00)
-var countDownDate = new Date("Jul 13, 2024 17:00:00").getTime();
+var countDownDate = new Date("Jul 20, 2024 17:00:00").getTime();
 
 // Actualiza la cuenta regresiva cada segundo
 var countdownfunction = setInterval(function () {
